@@ -1,6 +1,17 @@
 
 # LINK UTILI - da aggiornare ed organizzare :billed_cap:
 
+## Indice
+1. [Tools](#tools)
+2. [C#](#c-sharp)
+3. [Angular](#angular)
+4. [Windows Forms e WPF](#wpf)
+5. [Design Patterns](#design-patterns)
+6. [SOLID & GRASP](#solid)
+7. CODICE
+    - [Windows Form](#windows-form)
+    - [MVC](#mvc)
+
 Todo:
 - [ ] Sostituire quando possibile i link con versioni in italiano?
 
@@ -14,22 +25,22 @@ Legenda:
 [Come aggiungo emoji?](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 
 
-## Tools
+## Tools <a name="tools"></a> <sub>[^](#indice)</sub>
 
 [:teacher: yED - creazione diagrammi](https://www.yworks.com/products/yed/download)
 
 
-## C#
+## C# <a name="c-sharp"></a> <sub>[^](#indice)</sub>
 
 [:teacher: C# coding convention](https://learn.microsoft.com/en-US/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 
 
-## Angular
+## Angular <a name="angular"></a> <sub>[^](#indice)</sub>
 
 [:cherries::it: Slide introduzione angular](https://www.slideshare.net/valix85/introduzione-ad-angular-78)
 
 
-## Windows Forms e WPF
+## Windows Forms e WPF <a name="wpf"></a> <sub>[^](#indice)</sub>
 
 [:teacher: Model-view-controller (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
@@ -44,7 +55,7 @@ Legenda:
 [:teacher: Simple MVVM Pattern in WPF](https://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
 
 
-## DESIGN PATTERNS
+## Design Patterns <a name="design-patterns"></a> <sub>[^](#indice)</sub>
 [:teacher: Design patterns wiki](https://en.wikipedia.org/wiki/Design_Patterns)
 
 [:cherries: Design Patterns, Bad smells and Refractoring](https://refactoring.guru/)
@@ -52,7 +63,7 @@ Legenda:
 [:cherries: Design Patterns with examples](https://medium.com/cp-massive-programming/design-patterns-cheat-sheet-list-e9a55d82de5d)
 
 
-### Quelli fatti:
+### Quelli fatti: 
 [:teacher: Command pattern](https://en.wikipedia.org/wiki/Command_pattern)
 
 [:teacher: Facade pattern](https://en.wikipedia.org/wiki/Facade_pattern)
@@ -62,12 +73,18 @@ Legenda:
 [:teacher: Chain-of-responsibility pattern](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 
 
-## S.O.L.I.D.
+## S.O.L.I.D. <a name="solid"></a> <sub>[^](#indice)</sub>
+
 [:teacher: SOLID](https://en.wikipedia.org/wiki/SOLID)
 
-## Codice
+## G.R.A.S.P. <a name="grasp"></a> <sub>[^](#indice)</sub>
 
-### Windows Form
+[:teacher: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
+
+
+# Codice <a name="codice"></a>
+
+### Windows Form <a name="windows-form"></a> <sub>[^](#indice)</sub>
 
 ```C#
 using System.Globalization;
@@ -252,7 +269,7 @@ namespace WinFormsApp2
 }
 ```
 
-## MVVM
+## MVC (?) <a name="mvc"></a> <sub>[^](#indice)</sub>
 
 ```C#
 public partial class MainWindow : Window
