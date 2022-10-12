@@ -6,14 +6,18 @@
 2. [C#](#c-sharp)
 3. [Angular](#angular)
 4. [Windows Forms e WPF](#wpf)
-5. [Design Patterns](#design-patterns)
-6. [SOLID & GRASP](#solid)
-7. CODICE
+5. Varie Design
+    - [Design Patterns](#design-patterns)
+    - [DDD](#ddd)
+7. [SOLID](#solid)
+8. [GRASP](#grasp)
+9. Codice
     - [Windows Form](#windows-form)
-    - [MVC](#mvc)
+    - [MVVM](#mvvm)
 
 Todo:
-- [ ] Inserire tabella con definizioni SOLID e GRASP
+- [X] Inserire tabelle con definizioni SOLID e GRASP
+- [ ] Abbellire e formattare tabelle SOLID e GRASP
 - [ ] Sostituire quando possibile i link con versioni in italiano?
 
 Legenda:
@@ -55,30 +59,58 @@ Legenda:
 
 [:teacher: Simple MVVM Pattern in WPF](https://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
 
+## Roba Design
 
-## Design Patterns <a name="design-patterns"></a> <sub>[^](#indice)</sub>
+### Design Patterns <a name="design-patterns"></a> <sub>[^](#indice)</sub>
 [:teacher: Design patterns wiki](https://en.wikipedia.org/wiki/Design_Patterns)
 
 [:cherries: Design Patterns, Bad smells and Refractoring](https://refactoring.guru/)
 
 [:cherries: Design Patterns with examples](https://medium.com/cp-massive-programming/design-patterns-cheat-sheet-list-e9a55d82de5d)
 
+#### Quelli fatti: 
+- [:teacher: Command pattern](https://en.wikipedia.org/wiki/Command_pattern)
 
-### Quelli fatti: 
-[:teacher: Command pattern](https://en.wikipedia.org/wiki/Command_pattern)
+- [:teacher: Facade pattern](https://en.wikipedia.org/wiki/Facade_pattern)
 
-[:teacher: Facade pattern](https://en.wikipedia.org/wiki/Facade_pattern)
+- [:teacher: Proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
 
-[:teacher: Proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
+- [:teacher: Chain-of-responsibility pattern](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 
-[:teacher: Chain-of-responsibility pattern](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
+### DDD - Domain Driven Design <a name="ddd"></a> <sub>[^](#indice)</sub>
+https://en.wikipedia.org/wiki/Domain-driven_design
 
 
 ## S.O.L.I.D. <a name="solid"></a> <sub>[^](#indice)</sub>
 
+| | Princìpi | Definizione |
+|-|----------|-------------|
+|S|Single Responsibility|Una classe dovrebbe avere uno ed unico motivo per cambiare|
+|O|Open-Closed          |Una qualsiasi entità software (classe, modulo,  funzione, ecc.) dovrebbe avere meccanismi che permettono di estenderne il comportamento senza apportare modifiche al codice preesistente. Quindi Aperte alle estensioni ma chiuse alle modifiche; da qui il nome Open-Closed.|
+|L|Liskov Substitution  |Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.|
+|I|Interface Segregation Principle|Una classe client non dovrebbe dipendere da metodi che non usa, e che pertanto è preferibile che le interfacce siano molte, specifiche e piccole (composte da pochi metodi) piuttosto che poche, generali e grandi.|
+|D|Dependency Inversion Principle|Una classe dovrebbe dipendere da astrazioni e non da concrete e specifiche implementazioni.|
+
 [:teacher: SOLID](https://en.wikipedia.org/wiki/SOLID)
 
+[:cherries::it: Spiegazione SOLID ](http://losviluppatore.it/solid-design-principles/)
+
+
 ## G.R.A.S.P. <a name="grasp"></a> <sub>[^](#indice)</sub>
+
+|Pattern             | Problema | Soluzione |
+|--------------------|----------|-----------|
+|Information Expert  | Nella progettazione qual è il principio da seguire per assegnare una responsabilità ad una classe? | Si assegni la responsabilità alla classe che ha l’informazione necessaria per assumersi tale responsabilità |
+|Creator             | Chi dovrebbe creare un’istanza di A? | Si assegni alla classe B la responsabilità di creare un’istanza della classe A se è vera una o più tra queste condizioni:<br> 1. B contiene o aggrega oggetti A (in una collezione)<br> 2. B registra oggetti A<br> 3. B usa oggetti A<br> 4. B ha i dati per inizializzare oggetti A|
+|Controller          | A chi si assegna la responsabilità di gestire gli eventi esterni che entrano in una interfaccia utente? | La responsabilità di ricevere o gestire dall’esterno un evento che attiva un sistema si può assegnare:<br>– Mediante un unico rappresentante del sistema (façade pattern, non ancora visto)<br>– Mediante un controllore di sessione: per ogni caso d’uso il pattern definisce il primo oggetto che riceve e coordina un’operazione di sistema|
+|Low Coupling (Disaccoppiamento)| Come ridurre le conseguenze delle modifiche ed incoraggiare il riuso? | Assegnare la responsabilità in modo che l’accoppiamento (dipendenze tra le classi) rimanga basso|
+|High Cohesion       | come si disegnano classi coese e maneggevoli? | assegnare le responsabilità in modo da favorire la coesione |
+|Polymorphism        |come gestire responsabilità alternative basate sul tipo (classe) | quando le alternative (o i comportamenti) variano col tipo (classe) assegna la responsabilità ai tipi per il quale il comportamento varia, usando operazioni polimorfe|
+|Pure Fabrication    | quando usando Information Expert si violano Cohesion e/o Coupling, come assegnare le responsabilità?| introdurre una classe artificiosa (di convenienza) altamente coesa e poco accoppiata|
+|Indirection         | dove assegnare una responsabilità, evitando l’accoppiamento diretto? Come disaccoppiare?| Assegna la responsabilità ad un oggetto intermediario, che dunque crea una indirezione tra gli altri componenti|
+|Protected Variations| come progettare un oggetto le cui responsabilità non sono ancora fissate, senza che ci sia un impatto indesiderato su altri oggetti?| identifica i punti in cui sono prevedibili variazioni, e crea attorno ad essi un’interfaccia stabile Nota: è uno dei pattern più importanti nella progettazione software, generalizza la “Legge di Demetra”[^1]|
+
+[:cherries::ita: Slide GRASP con spiegazioni ed esempi](https://www.cs.unibo.it/~cianca/wwwpages/ids/9.pdf)
 
 [:teacher: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 
@@ -270,7 +302,9 @@ namespace WinFormsApp2
 }
 ```
 
-## MVC (?) <a name="mvc"></a> <sub>[^](#indice)</sub>
+## MVVM <a name="mvvm"></a> <sub>[^](#indice)</sub>
+
+![MVVM](https://user-images.githubusercontent.com/93521016/195328034-19aaa601-ad9f-4821-a71e-a10b13aed1dd.jpg)
 
 ```C#
 public partial class MainWindow : Window
@@ -345,3 +379,15 @@ public partial class MainWindow : Window
 <TextBox  Grid.Row="1" x:Name="MyPrefixTb" Text="{Binding Path=Prefix}"></TextBox>
 <Button Grid.Row="2" Click="Button_Click">Do something</Button>
 ```       
+
+
+
+[^1]:Principio Legge di Demetra
+La “Legge di Demetra” (o “Non parlare agli
+sconosciuti”) è un principio di progettazione che
+suggerisce di disaccoppiare le classi:
+-Ciascuna classe deve avere la minima
+informazione necessaria sulle altre classi (incluse
+le sue classi componenti)
+-Ogni classe parla solo con le classi amiche (non
+parla con le classi “sconosciute”)
