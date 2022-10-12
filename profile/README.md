@@ -13,6 +13,7 @@
     - [MVC](#mvc)
 
 Todo:
+- [ ] Inserire tabella con definizioni SOLID e GRASP
 - [ ] Sostituire quando possibile i link con versioni in italiano?
 
 Legenda:
