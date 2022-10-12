@@ -14,6 +14,7 @@
 9. Codice
     - [Windows Form](#windows-form)
     - [MVVM](#mvvm)
+    - [MultiThreading](#multithread)
 
 Todo:
 - [X] Inserire tabelle con definizioni SOLID e GRASP
@@ -33,6 +34,10 @@ Legenda:
 ## Tools <a name="tools"></a> <sub>[^](#indice)</sub>
 
 [:teacher: yED - creazione diagrammi](https://www.yworks.com/products/yed/download)
+
+[:teacher: SharpLab - fa vedere cosa succede "sottoAlCulo" del codice](https://sharplab.io/)
+    
+   - [Esempio](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQMwAJboMLoN7LpGYZQAs6AsgBQCU+hxTjTRAbgIYBO6ANgJYBnAC7oAvOgB2AUwDumOGQB0AGSHCAPP0nCAfHQDcLVgDMA9l2kcAxgAtqnHv2HSAtum191tY0wJJWJig4AE5qZzdaIwDA9ABfX2JjBKQ4oA===) con foreach
 
 
 ## C# <a name="c-sharp"></a> <sub>[^](#indice)</sub>
@@ -83,20 +88,24 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 
 ## S.O.L.I.D. <a name="solid"></a> <sub>[^](#indice)</sub>
 
-| | Princìpi | Definizione |
-|-|----------|-------------|
-|S|Single Responsibility|Una classe dovrebbe avere uno ed unico motivo per cambiare|
-|O|Open-Closed          |Una qualsiasi entità software (classe, modulo,  funzione, ecc.) dovrebbe avere meccanismi che permettono di estenderne il comportamento senza apportare modifiche al codice preesistente. Quindi Aperte alle estensioni ma chiuse alle modifiche; da qui il nome Open-Closed.|
-|L|Liskov Substitution  |Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.|
-|I|Interface Segregation Principle|Una classe client non dovrebbe dipendere da metodi che non usa, e che pertanto è preferibile che le interfacce siano molte, specifiche e piccole (composte da pochi metodi) piuttosto che poche, generali e grandi.|
-|D|Dependency Inversion Principle|Una classe dovrebbe dipendere da astrazioni e non da concrete e specifiche implementazioni.|
-
 [:teacher: SOLID](https://en.wikipedia.org/wiki/SOLID)
 
 [:cherries::it: Spiegazione SOLID ](http://losviluppatore.it/solid-design-principles/)
 
+| | Princìpi | Definizione |
+|-|----------|-------------|
+|*S*|Single Responsibility|Una classe dovrebbe avere uno ed unico motivo per cambiare|
+|*O*|Open-Closed          |Una qualsiasi entità software (classe, modulo,  funzione, ecc.) dovrebbe avere meccanismi che permettono di estenderne il comportamento senza apportare modifiche al codice preesistente. Quindi Aperte alle estensioni ma chiuse alle modifiche; da qui il nome Open-Closed.|
+|*L*|Liskov Substitution  |Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.|
+|*I*|Interface Segregation Principle|Una classe client non dovrebbe dipendere da metodi che non usa, e che pertanto è preferibile che le interfacce siano molte, specifiche e piccole (composte da pochi metodi) piuttosto che poche, generali e grandi.|
+|*D*|Dependency Inversion Principle|Una classe dovrebbe dipendere da astrazioni e non da concrete e specifiche implementazioni.|
+
 
 ## G.R.A.S.P. <a name="grasp"></a> <sub>[^](#indice)</sub>
+
+[:cherries::it: Slide GRASP con spiegazioni ed esempi](https://www.cs.unibo.it/~cianca/wwwpages/ids/9.pdf)
+
+[:teacher: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 
 |Pattern             | Problema | Soluzione |
 |--------------------|----------|-----------|
@@ -109,10 +118,6 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 |Pure Fabrication    | quando usando Information Expert si violano Cohesion e/o Coupling, come assegnare le responsabilità?| introdurre una classe artificiosa (di convenienza) altamente coesa e poco accoppiata|
 |Indirection         | dove assegnare una responsabilità, evitando l’accoppiamento diretto? Come disaccoppiare?| Assegna la responsabilità ad un oggetto intermediario, che dunque crea una indirezione tra gli altri componenti|
 |Protected Variations| come progettare un oggetto le cui responsabilità non sono ancora fissate, senza che ci sia un impatto indesiderato su altri oggetti?| identifica i punti in cui sono prevedibili variazioni, e crea attorno ad essi un’interfaccia stabile Nota: è uno dei pattern più importanti nella progettazione software, generalizza la “Legge di Demetra”[^1]|
-
-[:cherries::ita: Slide GRASP con spiegazioni ed esempi](https://www.cs.unibo.it/~cianca/wwwpages/ids/9.pdf)
-
-[:teacher: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 
 
 # Codice <a name="codice"></a>
@@ -374,20 +379,127 @@ public partial class MainWindow : Window
         public event PropertyChangedEventHandler? PropertyChanged;
     }
     
-3:24
 <TextBox Grid.Row="0" x:Name="MyTb" Text="{Binding Path=Name}"></TextBox>
 <TextBox  Grid.Row="1" x:Name="MyPrefixTb" Text="{Binding Path=Prefix}"></TextBox>
 <Button Grid.Row="2" Click="Button_Click">Do something</Button>
-```       
+```
+
+## MultiThreading <a name="multithread"></a> <sub>[^](#indice)</sub>
+
+```C#
+using ConsoleApp3;
+Console.WriteLine("[{0}] PROGRAM START", Thread.CurrentThread.ManagedThreadId);
+List<int> numbers = new List<int>();
+for (var i= 0;i< 100;i++)
+{
+    numbers.Add(i);
+}
+var worker1 = new Worker1();
+var worker2 = new Worker2();
+Thread t1 = null;
+Thread t2 = null;
+t1 = worker1.Initialize(i=> {
+    numbers.Remove(numbers.Count - 1);
+    if (t2 != null && i == 19)
+    {
+        Console.WriteLine("[{0}] WAITING FOR T2 TO END", Thread.CurrentThread.ManagedThreadId);
+        t2.Join();
+        Console.WriteLine("[{0}] T2 ENDED, CONTINUING...", Thread.CurrentThread.ManagedThreadId);
+    }
+});
+t1.Start();
+Console.WriteLine("Started worker "+t1.Name);
+t2 = worker2.Initialize(i=> {
+    var sum = 0;
+    foreach (var j in numbers)
+    {
+        sum += j;
+    }
+    Console.WriteLine("[{0}] SUM={1}", Thread.CurrentThread.ManagedThreadId,sum);
+});
+worker1.WaitFor(t2);
+t2.Start();
+Console.WriteLine("Started worker " + t2.Name);
+t1.Join();
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine("[{0}] PROGRAM LOOP {1}", Thread.CurrentThread.ManagedThreadId, i);
+    Thread.Sleep(200);
+}
+Console.WriteLine("[{0}] PROGRAM END", Thread.CurrentThread.ManagedThreadId);
+```
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp3
+{
+    public class Worker1 : IWorker
+    {
+           private Thread threadToWait;
+        public void WaitFor(Thread threadToWait)
+        {
+            this.threadToWait = threadToWait;
+        }
+        public Thread Initialize(Action<int> a)
+        {
+           var  t1 = new Thread(() =>
+            {
+                Console.WriteLine("[{0}] L1 THREAD START", Thread.CurrentThread.ManagedThreadId);
+                for (int i = 0; i < 40; i++)
+                {
+                    if (a != null)
+                        a(i);
+                    Console.WriteLine("[{0}] L1  LOOP {1}", Thread.CurrentThread.ManagedThreadId, i);
+                    Thread.Sleep(200);
+                }
+                Console.WriteLine("[{0}] L1 THREAD END", Thread.CurrentThread.ManagedThreadId);
+            });
+            t1.Name = "Worker 1";
+            return t1;
+        }
+    }
+}
+```
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp3
+{
+    public interface IWorker
+    {
+        Thread Initialize(Action<int> a);
+    }
+    public class Worker2 : IWorker
+    {
+        public Thread Initialize(Action<int> a)
+        {
+          var  t2 = new Thread(() =>
+            {
+                Console.WriteLine("[{0}] L2 THREAD START", Thread.CurrentThread.ManagedThreadId);
+                for (int i = 0; i < 60; i++)
+                {
+                    if (a != null)
+                        a(i);
+                    Console.WriteLine("[{0}] L2  LOOP {1}", Thread.CurrentThread.ManagedThreadId, i);
+                    Thread.Sleep(200);
+                }
+                Console.WriteLine("[{0}] L2 THREAD END", Thread.CurrentThread.ManagedThreadId);
+            });
+            t2.Name = "Worker 2";
+            return t2;
+        }
+    }
+}
+```
 
 
 
-[^1]:Principio Legge di Demetra
-La “Legge di Demetra” (o “Non parlare agli
-sconosciuti”) è un principio di progettazione che
-suggerisce di disaccoppiare le classi:
--Ciascuna classe deve avere la minima
-informazione necessaria sulle altre classi (incluse
-le sue classi componenti)
--Ogni classe parla solo con le classi amiche (non
-parla con le classi “sconosciute”)
+[^1]: La “Legge di Demetra” (o “Non parlare agli sconosciuti”) è un principio di progettazione che suggerisce di disaccoppiare le classi: - Ciascuna classe deve avere la minima informazione necessaria sulle altre classi (incluse le sue classi componenti) - Ogni classe parla solo con le classi amiche (non parla con le classi “sconosciute”)
