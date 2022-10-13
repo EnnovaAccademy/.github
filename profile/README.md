@@ -11,14 +11,18 @@
     - [DDD](#ddd)
 7. [SOLID](#solid)
 8. [GRASP](#grasp)
-9. Codice
-    - [Windows Form](#windows-form)
-    - [MVVM](#mvvm)
-    - [MultiThreading](#multithread)
+9. [Test e unit test](#test)
+10. [Multithreading](#multithreading)
+11. [Altro](#altro)
+12. Codice
+    - [Windows Form](#windows-form-code)
+    - [MVVM](#mvvm-code)
+    - [Multithreading](#multithread-code)
 
 Todo:
 - [X] Inserire tabelle con definizioni SOLID e GRASP
 - [ ] Abbellire e formattare tabelle SOLID e GRASP
+- [ ] Togliere i link wikipedia?
 - [ ] Sostituire quando possibile i link con versioni in italiano?
 
 Legenda:
@@ -36,6 +40,11 @@ Legenda:
 [:teacher: yED - creazione diagrammi](https://www.yworks.com/products/yed/download)
 
 [:teacher: SharpLab - fa vedere cosa succede "sottoAlCulo" del codice](https://sharplab.io/)
+
+[:teacher: TeamCity  - general purpose CI/CD solution](https://www.jetbrains.com/teamcity/?source=google&medium=cpc&campaign=12704032527&term=teamcity)
+
+[:teacher: NUnit - unit-testing framework for all .Net languages](https://nunit.org/)
+
     
    - [Esempio](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQMwAJboMLoN7LpGYZQAs6AsgBQCU+hxTjTRAbgIYBO6ANgJYBnAC7oAvOgB2AUwDumOGQB0AGSHCAPP0nCAfHQDcLVgDMA9l2kcAxgAtqnHv2HSAtum191tY0wJJWJig4AE5qZzdaIwDA9ABfX2JjBKQ4oA===) con foreach
 
@@ -120,9 +129,44 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 |Protected Variations| come progettare un oggetto le cui responsabilità non sono ancora fissate, senza che ci sia un impatto indesiderato su altri oggetti?| identifica i punti in cui sono prevedibili variazioni, e crea attorno ad essi un’interfaccia stabile Nota: è uno dei pattern più importanti nella progettazione software, generalizza la “Legge di Demetra”[^1]|
 
 
+## Test e Unit Test <a name="test"></a> <sub>[^](#indice)</sub>
+
+[:teacher: Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
+
+
+## Multithreading <a name="multithreading"></a> <sub>[^](#indice)</sub>
+
+[:teacher: Race condition](https://en.wikipedia.org/wiki/Race_condition)
+
+[:teacher: Race condition vulnerability in syscall wrappers](https://web.archive.org/web/20070926215258/http://chiralsoftware.com/blog/Race-condition-vulnerability-in-syscall-wrappers-fa3e57c594119803.html)
+
+[:teacher: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
+
+[:teacher: ConcurrentBag Class (System.Collections.Concurrent)](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0)
+
+[:teacher: SynchronizedCollection Class (System.Collections.Generic)](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.synchronizedcollection-1?view=dotnet-plat-ext-6.0)
+
+[:teacher: Work Stealing](https://en.wikipedia.org/wiki/Work_stealing)
+
+[:teacher: Best Practices When Using the Lock Statement](https://www.pluralsight.com/guides/lock-statement-best-practices)
+
+[:teacher: Overview of synchronization primitives](https://learn.microsoft.com/en-US/dotnet/standard/threading/overview-of-synchronization-primitives)
+
+[:teacher: Inside the Concurrent Collections: ConcurrentBag - Simple Talk](https://www.red-gate.com/simple-talk/blogs/inside-the-concurrent-collections-concurrentbag/)
+
+[:teacher: Mutex](https://iq.direct/blog/54-using-c-mutexes-for-inter-interprocess-synchronization.html)
+
+
+## Altro <a name="altro"></a>  <sub>[^](#indice)</sub>
+
+[:teacher: Safety Integrity Level](https://it.wikipedia.org/wiki/Safety_Integrity_Level)
+
+[:teacher: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
+
+
 # Codice <a name="codice"></a>
 
-### Windows Form <a name="windows-form"></a> <sub>[^](#indice)</sub>
+### Windows Form <a name="windows-form-code"></a> <sub>[^](#indice)</sub>
 
 ```C#
 using System.Globalization;
@@ -307,7 +351,7 @@ namespace WinFormsApp2
 }
 ```
 
-## MVVM <a name="mvvm"></a> <sub>[^](#indice)</sub>
+## MVVM <a name="mvvm-code"></a> <sub>[^](#indice)</sub>
 
 ![MVVM](https://user-images.githubusercontent.com/93521016/195328034-19aaa601-ad9f-4821-a71e-a10b13aed1dd.jpg)
 
@@ -384,7 +428,7 @@ public partial class MainWindow : Window
 <Button Grid.Row="2" Click="Button_Click">Do something</Button>
 ```
 
-## MultiThreading <a name="multithread"></a> <sub>[^](#indice)</sub>
+## MultiThreading <a name="multithread-code"></a> <sub>[^](#indice)</sub>
 
 ```C#
 using ConsoleApp3;
