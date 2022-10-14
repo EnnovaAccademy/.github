@@ -170,8 +170,8 @@ Legenda:
 [:zipper_mouth_face: Async-Await.zip](https://github.com/EnnovaAccademy/.github/files/9785106/Async-Await.zip)
 [:zipper_mouth_face: Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9785116/Async.Await.and.coordination.between.threads.zip)
 
-![image](https://user-images.githubusercontent.com/93521016/195822208-e49ea5c5-5d6d-4ce7-b0c1-484f30fb59bb.png)
-![image (1)](https://user-images.githubusercontent.com/93521016/195822233-2b9f20cc-dca5-4051-9040-88f3861bce82.png)
+<img src="https://user-images.githubusercontent.com/93521016/195822208-e49ea5c5-5d6d-4ce7-b0c1-484f30fb59bb.png" alt="asaw" width="400"/>
+<img src="https://user-images.githubusercontent.com/93521016/195822233-2b9f20cc-dca5-4051-9040-88f3861bce82.png" alt="asaw2" width="400"/>
 
 [:large_blue_circle: Asynchronous programming in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
 
@@ -378,7 +378,7 @@ namespace WinFormsApp2
 
 ## MVVM <a name="mvvm-code"></a> <sub>[^](#indice)</sub>
 
-![MVVM](https://user-images.githubusercontent.com/93521016/195328034-19aaa601-ad9f-4821-a71e-a10b13aed1dd.jpg)
+<img src="https://user-images.githubusercontent.com/93521016/195328034-19aaa601-ad9f-4821-a71e-a10b13aed1dd.jpg" alt="mvvm" width="300"/>
 
 ```C#
 public partial class MainWindow : Window
