@@ -32,8 +32,12 @@ Legenda:
 |:large_blue_circle:|Link fornito dal docente|
 | :it: :uk:         | Lingua (:uk: = default)|
 |:zipper_mouth_face:| ZIP File               |
+|:star:             | Importante             |
 
 [Come aggiungo emoji?](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+
+
+
 
 
 ## Tools <a name="tools"></a> <sub>[^](#indice)</sub>
@@ -46,8 +50,14 @@ Legenda:
 
 [:large_blue_circle: NUnit - unit-testing framework for all .Net languages](https://nunit.org/)
 
+[:large_blue_circle: nuget.org](https://api.nuget.org/v3/index.json)
+
+[:large_blue_circle: BenchmarkDotNet 0.13.2](https://www.nuget.org/packages/BenchmarkDotNet/)
     
    - [Esempio](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQMwAJboMLoN7LpGYZQAs6AsgBQCU+hxTjTRAbgIYBO6ANgJYBnAC7oAvOgB2AUwDumOGQB0AGSHCAPP0nCAfHQDcLVgDMA9l2kcAxgAtqnHv2HSAtum191tY0wJJWJig4AE5qZzdaIwDA9ABfX2JjBKQ4oA===) con foreach
+
+
+
 
 
 ## C# <a name="c-sharp"></a> <sub>[^](#indice)</sub>
@@ -55,15 +65,21 @@ Legenda:
 [:large_blue_circle: C# coding convention](https://learn.microsoft.com/en-US/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 
 
+
+
+
 ## Angular <a name="angular"></a> <sub>[^](#indice)</sub>
 
 [:cherries::it: Slide introduzione angular](https://www.slideshare.net/valix85/introduzione-ad-angular-78)
 
 
+
+
+
 ## Windows Forms e WPF <a name="wpf"></a> <sub>[^](#indice)</sub>
 
-[:zipper_mouth_face: WinFormsApp2.zip](https://github.com/EnnovaAccademy/.github/files/9785202/WinFormsApp2.zip)
-[:zipper_mouth_face: WPF_Calculator_adm-master.zip](https://github.com/EnnovaAccademy/.github/files/9785203/WPF_Calculator_adm-master.zip)
+[:zipper_mouth_face: :large_blue_circle: WinFormsApp2.zip](https://github.com/EnnovaAccademy/.github/files/9785202/WinFormsApp2.zip)
+[:zipper_mouth_face: :large_blue_circle: WPF_Calculator_adm-master.zip](https://github.com/EnnovaAccademy/.github/files/9785203/WPF_Calculator_adm-master.zip)
 
 [:large_blue_circle: Model-view-controller (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
@@ -77,7 +93,12 @@ Legenda:
 
 [:large_blue_circle: Simple MVVM Pattern in WPF](https://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
 
+
+
+
+
 ## Roba Design
+
 
 ### Design Patterns <a name="design-patterns"></a> <sub>[^](#indice)</sub>
 [:large_blue_circle: Design patterns wiki](https://en.wikipedia.org/wiki/Design_Patterns)
@@ -102,11 +123,14 @@ Legenda:
 [:large_blue_circle: Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
 
 
+
+
+
 ## S.O.L.I.D. <a name="solid"></a> <sub>[^](#indice)</sub>
 
 [:large_blue_circle: SOLID](https://en.wikipedia.org/wiki/SOLID)
 
-[:cherries::it: Spiegazione SOLID ](http://losviluppatore.it/solid-design-principles/)
+[:cherries: :it: Spiegazione SOLID ](http://losviluppatore.it/solid-design-principles/)
 
 | | Princìpi | Definizione |
 |-|----------|-------------|
@@ -117,9 +141,12 @@ Legenda:
 |*D*|Dependency Inversion |Una classe dovrebbe dipendere da astrazioni e non da concrete e specifiche implementazioni.|
 
 
+
+
+
 ## G.R.A.S.P. <a name="grasp"></a> <sub>[^](#indice)</sub>
 
-[:cherries::it: Slide GRASP con spiegazioni ed esempi](https://www.cs.unibo.it/~cianca/wwwpages/ids/9.pdf)
+[:cherries: :it: Slide GRASP con spiegazioni ed esempi](https://www.cs.unibo.it/~cianca/wwwpages/ids/9.pdf)
 
 [:large_blue_circle: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 
@@ -136,15 +163,26 @@ Legenda:
 |Protected Variations| come progettare un oggetto le cui responsabilità non sono ancora fissate, senza che ci sia un impatto indesiderato su altri oggetti?| identifica i punti in cui sono prevedibili variazioni, e crea attorno ad essi un’interfaccia stabile Nota: è uno dei pattern più importanti nella progettazione software, generalizza la “Legge di Demetra”[^1]|
 
 
+
+
+
 ## Test e Unit Test <a name="test"></a> <sub>[^](#indice)</sub>
+
+[:zipper_mouth_face: :large_blue_circle: Multithreading and unit testing.zip](https://github.com/EnnovaAccademy/.github/files/9787279/Multithreading.and.unit.testing.zip)
+[:zipper_mouth_face: :large_blue_circle: BenchmarksApp.zip](https://github.com/EnnovaAccademy/.github/files/9787285/BenchmarksApp.zip)
+[:zipper_mouth_face: :large_blue_circle: Unit-tested Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9787293/Unit-tested.Async.Await.and.coordination.between.threads.zip)
 
 [:large_blue_circle: Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
 
 
+
+
+
 ## Multithreading e async-await<a name="multithreading"></a> <sub>[^](#indice)</sub>
 
+
 ### Multithreading
-[:zipper_mouth_face: Multithreading and unit testing.zip](https://github.com/EnnovaAccademy/.github/files/9785208/Multithreading.and.unit.testing.zip)
+[:zipper_mouth_face: :large_blue_circle:  Multithreading and unit testing.zip](https://github.com/EnnovaAccademy/.github/files/9785208/Multithreading.and.unit.testing.zip)
 
 [:large_blue_circle: Race condition](https://en.wikipedia.org/wiki/Race_condition)
 
@@ -166,12 +204,26 @@ Legenda:
 
 [:large_blue_circle: Mutex](https://iq.direct/blog/54-using-c-mutexes-for-inter-interprocess-synchronization.html)
 
-### Async - Await
-[:zipper_mouth_face: Async-Await.zip](https://github.com/EnnovaAccademy/.github/files/9785106/Async-Await.zip)
-[:zipper_mouth_face: Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9785116/Async.Await.and.coordination.between.threads.zip)
 
-<img src="https://user-images.githubusercontent.com/93521016/195822208-e49ea5c5-5d6d-4ce7-b0c1-484f30fb59bb.png" alt="asaw" width="400"/>
-<img src="https://user-images.githubusercontent.com/93521016/195822233-2b9f20cc-dca5-4051-9040-88f3861bce82.png" alt="asaw2" width="400"/>
+
+
+
+### Async - Await
+[:zipper_mouth_face: :large_blue_circle: Async-Await.zip](https://github.com/EnnovaAccademy/.github/files/9785106/Async-Await.zip)
+[:zipper_mouth_face: :large_blue_circle: Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9785116/Async.Await.and.coordination.between.threads.zip)
+
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/93521016/195822208-e49ea5c5-5d6d-4ce7-b0c1-484f30fb59bb.png" alt="asaw" width="400"/></td>
+    <td><img src="https://user-images.githubusercontent.com/93521016/195822233-2b9f20cc-dca5-4051-9040-88f3861bce82.png" alt="asaw2" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/93521016/195871898-64e38d8b-1c50-45e2-9693-7895845b8638.png" alt="asaw2" width="400"/></td>
+    <td><img src="https://user-images.githubusercontent.com/93521016/195872175-04eb8e9b-71f5-4e46-9a10-0debcd8a2cdf.png" alt="asaw2" width="200"/></td>
+  </tr>
+</table>
+
 
 [:large_blue_circle: Asynchronous programming in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
 
@@ -181,12 +233,31 @@ Legenda:
 
 [:large_blue_circle: SemaphoreSlim Class (System.Threading)](https://learn.microsoft.com/en-us/dotnet/api/system.threading.semaphoreslim?view=net-6.0)
 
+[:star: :large_blue_circle: C# Async Antipatterns](https://markheath.net/post/async-antipatterns)
+
+[:large_blue_circle: Async/await in C#: pitfalls](https://enterprisecraftsmanship.com/posts/pitfalls-of-async-await/)
+
+[:large_blue_circle: Common async / Task mistakes, and how to avoid them](https://itnext.io/common-async-task-mistakes-and-how-to-avoid-them-fe61e2c587f?gi=ee55df732ca0)
+
+[:star: :large_blue_circle: Dissecting the async methods in C#](https://devblogs.microsoft.com/premier-developer/dissecting-the-async-methods-in-c/)
+
+[:large_blue_circle: Exceptions in Managed Threads](https://learn.microsoft.com/en-us/dotnet/standard/threading/exceptions-in-managed-threads)
+
+[:large_blue_circle: Don't Block on Async Code](https://blog.stephencleary.com/2012/07/dont-block-on-async-code.html)
+
+
+
+
+
 
 ## Altro <a name="altro"></a>  <sub>[^](#indice)</sub>
 
 [:large_blue_circle: Safety Integrity Level](https://it.wikipedia.org/wiki/Safety_Integrity_Level)
 
 [:large_blue_circle: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
+
+
+
 
 
 # Codice <a name="codice"></a>
