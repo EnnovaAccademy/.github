@@ -12,7 +12,7 @@
 7. [SOLID](#solid)
 8. [GRASP](#grasp)
 9. [Test e unit test](#test)
-10. [Multithreading](#multithreading)
+10. [Multithreading e async-await](#multithreading)
 11. [Altro](#altro)
 12. Codice
     - [Windows Form](#windows-form-code)
@@ -106,8 +106,8 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 |*S*|Single Responsibility|Una classe dovrebbe avere uno ed unico motivo per cambiare|
 |*O*|Open-Closed          |Una qualsiasi entità software (classe, modulo,  funzione, ecc.) dovrebbe avere meccanismi che permettono di estenderne il comportamento senza apportare modifiche al codice preesistente. Quindi Aperte alle estensioni ma chiuse alle modifiche; da qui il nome Open-Closed.|
 |*L*|Liskov Substitution  |Le classi derivate devono sempre poter essere sostituite dalle classi da cui queste derivano (superclassi) in maniera trasparente.|
-|*I*|Interface Segregation Principle|Una classe client non dovrebbe dipendere da metodi che non usa, e che pertanto è preferibile che le interfacce siano molte, specifiche e piccole (composte da pochi metodi) piuttosto che poche, generali e grandi.|
-|*D*|Dependency Inversion Principle|Una classe dovrebbe dipendere da astrazioni e non da concrete e specifiche implementazioni.|
+|*I*|Interface Segregation |Una classe client non dovrebbe dipendere da metodi che non usa, e che pertanto è preferibile che le interfacce siano molte, specifiche e piccole (composte da pochi metodi) piuttosto che poche, generali e grandi.|
+|*D*|Dependency Inversion |Una classe dovrebbe dipendere da astrazioni e non da concrete e specifiche implementazioni.|
 
 
 ## G.R.A.S.P. <a name="grasp"></a> <sub>[^](#indice)</sub>
@@ -134,7 +134,9 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 [:teacher: Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
 
 
-## Multithreading <a name="multithreading"></a> <sub>[^](#indice)</sub>
+## Multithreading e async-await<a name="multithreading"></a> <sub>[^](#indice)</sub>
+
+### Multithreading
 
 [:teacher: Race condition](https://en.wikipedia.org/wiki/Race_condition)
 
@@ -155,6 +157,19 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 [:teacher: Inside the Concurrent Collections: ConcurrentBag - Simple Talk](https://www.red-gate.com/simple-talk/blogs/inside-the-concurrent-collections-concurrentbag/)
 
 [:teacher: Mutex](https://iq.direct/blog/54-using-c-mutexes-for-inter-interprocess-synchronization.html)
+
+### Async - Await
+
+![image](https://user-images.githubusercontent.com/93521016/195822208-e49ea5c5-5d6d-4ce7-b0c1-484f30fb59bb.png)
+![image (1)](https://user-images.githubusercontent.com/93521016/195822233-2b9f20cc-dca5-4051-9040-88f3861bce82.png)
+
+[:teacher: Asynchronous programming in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
+
+[:teacher: How do I find which directory my .NET Core console application was started in or is running from?](https://www.hanselman.com/blog/how-do-i-find-which-directory-my-net-core-console-application-was-started-in-or-is-running-from)
+
+[:teacher: SharpLab async-await](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQAwAIpwKwG5lqZwB0AkgPL4oDMmM6AwugN7Lrua1QAcmAbAB4sqAHzoAogDsALgCcAngAUA9gEsZACgCULDnvZt97AG4BDWegDO6ALyYAnOgBiqgDYBTYgCV3p4AEFXVwAVdwAPaX9LeUkAYw0AIgYQAB0UgDM3T2kIhK0qI3YoAHYrXEL0Q3YAX2RqoA=)
+
+[:teacher: SemaphoreSlim Class (System.Threading)](https://learn.microsoft.com/en-us/dotnet/api/system.threading.semaphoreslim?view=net-6.0)
 
 
 ## Altro <a name="altro"></a>  <sub>[^](#indice)</sub>
