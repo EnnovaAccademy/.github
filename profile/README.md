@@ -26,24 +26,25 @@ Todo:
 - [ ] Sostituire quando possibile i link con versioni in italiano?
 
 Legenda:
-|Simbolo         |Significato             |
-|:--------------:|------------------------|
-| :cherries:     |Link fornito da noi     |
-| :teacher:      |Link fornito dal docente|
-| :it: :uk:      | Lingua (:uk: = default)|
+|Simbolo            |Significato             |
+|:-----------------:|------------------------|
+| :cherries:        |Link fornito da noi     |
+|:large_blue_circle:|Link fornito dal docente|
+| :it: :uk:         | Lingua (:uk: = default)|
+|:zipper_mouth_face:| ZIP File               |
 
 [Come aggiungo emoji?](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
 
 
 ## Tools <a name="tools"></a> <sub>[^](#indice)</sub>
 
-[:teacher: yED - creazione diagrammi](https://www.yworks.com/products/yed/download)
+[:large_blue_circle: yED - creazione diagrammi](https://www.yworks.com/products/yed/download)
 
-[:teacher: SharpLab - fa vedere cosa succede "sottoAlCulo" del codice](https://sharplab.io/)
+[:large_blue_circle: SharpLab - fa vedere cosa succede "sottoAlCulo" del codice](https://sharplab.io/)
 
-[:teacher: TeamCity  - general purpose CI/CD solution](https://www.jetbrains.com/teamcity/?source=google&medium=cpc&campaign=12704032527&term=teamcity)
+[:large_blue_circle: TeamCity  - general purpose CI/CD solution](https://www.jetbrains.com/teamcity/?source=google&medium=cpc&campaign=12704032527&term=teamcity)
 
-[:teacher: NUnit - unit-testing framework for all .Net languages](https://nunit.org/)
+[:large_blue_circle: NUnit - unit-testing framework for all .Net languages](https://nunit.org/)
 
     
    - [Esempio](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQMwAJboMLoN7LpGYZQAs6AsgBQCU+hxTjTRAbgIYBO6ANgJYBnAC7oAvOgB2AUwDumOGQB0AGSHCAPP0nCAfHQDcLVgDMA9l2kcAxgAtqnHv2HSAtum191tY0wJJWJig4AE5qZzdaIwDA9ABfX2JjBKQ4oA===) con foreach
@@ -51,7 +52,7 @@ Legenda:
 
 ## C# <a name="c-sharp"></a> <sub>[^](#indice)</sub>
 
-[:teacher: C# coding convention](https://learn.microsoft.com/en-US/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+[:large_blue_circle: C# coding convention](https://learn.microsoft.com/en-US/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 
 
 ## Angular <a name="angular"></a> <sub>[^](#indice)</sub>
@@ -61,43 +62,49 @@ Legenda:
 
 ## Windows Forms e WPF <a name="wpf"></a> <sub>[^](#indice)</sub>
 
-[:teacher: Model-view-controller (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+[:zipper_mouth_face: WinFormsApp2.zip](https://github.com/EnnovaAccademy/.github/files/9785202/WinFormsApp2.zip)
+[:zipper_mouth_face: WPF_Calculator_adm-master.zip](https://github.com/EnnovaAccademy/.github/files/9785203/WPF_Calculator_adm-master.zip)
 
-[:teacher: Model–view–presenter (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter#:~:text=MVP%20is%20a%20user%20interface,upon%20in%20the%20user%20interface)
+[:large_blue_circle: Model-view-controller (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
-[:teacher: :it: Procedura: creare un elemento Grid - WPF .NET Framework](https://learn.microsoft.com/it-it/dotnet/desktop/wpf/controls/how-to-create-a-grid-element?view=netframeworkdesktop-4.8)
+[:large_blue_circle: Model–view–presenter (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter#:~:text=MVP%20is%20a%20user%20interface,upon%20in%20the%20user%20interface)
 
-[:teacher: Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+[:large_blue_circle: :it: Procedura: creare un elemento Grid - WPF .NET Framework](https://learn.microsoft.com/it-it/dotnet/desktop/wpf/controls/how-to-create-a-grid-element?view=netframeworkdesktop-4.8)
 
-[:teacher: Model–view–viewmodel (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+[:large_blue_circle: Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
-[:teacher: Simple MVVM Pattern in WPF](https://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
+[:large_blue_circle: Model–view–viewmodel (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)
+
+[:large_blue_circle: Simple MVVM Pattern in WPF](https://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/)
 
 ## Roba Design
 
 ### Design Patterns <a name="design-patterns"></a> <sub>[^](#indice)</sub>
-[:teacher: Design patterns wiki](https://en.wikipedia.org/wiki/Design_Patterns)
+[:large_blue_circle: Design patterns wiki](https://en.wikipedia.org/wiki/Design_Patterns)
 
 [:cherries: Design Patterns, Bad smells and Refractoring](https://refactoring.guru/)
 
 [:cherries: Design Patterns with examples](https://medium.com/cp-massive-programming/design-patterns-cheat-sheet-list-e9a55d82de5d)
 
+
 #### Quelli fatti: 
-- [:teacher: Command pattern](https://en.wikipedia.org/wiki/Command_pattern)
+- [:large_blue_circle: Command pattern](https://en.wikipedia.org/wiki/Command_pattern)
 
-- [:teacher: Facade pattern](https://en.wikipedia.org/wiki/Facade_pattern)
+- [:large_blue_circle: Facade pattern](https://en.wikipedia.org/wiki/Facade_pattern)
 
-- [:teacher: Proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
+- [:large_blue_circle: Proxy pattern](https://en.wikipedia.org/wiki/Proxy_pattern)
 
-- [:teacher: Chain-of-responsibility pattern](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
+- [:large_blue_circle: Chain-of-responsibility pattern](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
+
 
 ### DDD - Domain Driven Design <a name="ddd"></a> <sub>[^](#indice)</sub>
-https://en.wikipedia.org/wiki/Domain-driven_design
+
+[:large_blue_circle: Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
 
 
 ## S.O.L.I.D. <a name="solid"></a> <sub>[^](#indice)</sub>
 
-[:teacher: SOLID](https://en.wikipedia.org/wiki/SOLID)
+[:large_blue_circle: SOLID](https://en.wikipedia.org/wiki/SOLID)
 
 [:cherries::it: Spiegazione SOLID ](http://losviluppatore.it/solid-design-principles/)
 
@@ -114,7 +121,7 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 
 [:cherries::it: Slide GRASP con spiegazioni ed esempi](https://www.cs.unibo.it/~cianca/wwwpages/ids/9.pdf)
 
-[:teacher: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
+[:large_blue_circle: GRASP (object-oriented design)](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
 
 |Pattern             | Problema | Soluzione |
 |--------------------|----------|-----------|
@@ -131,52 +138,55 @@ https://en.wikipedia.org/wiki/Domain-driven_design
 
 ## Test e Unit Test <a name="test"></a> <sub>[^](#indice)</sub>
 
-[:teacher: Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
+[:large_blue_circle: Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
 
 
 ## Multithreading e async-await<a name="multithreading"></a> <sub>[^](#indice)</sub>
 
 ### Multithreading
+[:zipper_mouth_face: Multithreading and unit testing.zip](https://github.com/EnnovaAccademy/.github/files/9785208/Multithreading.and.unit.testing.zip)
 
-[:teacher: Race condition](https://en.wikipedia.org/wiki/Race_condition)
+[:large_blue_circle: Race condition](https://en.wikipedia.org/wiki/Race_condition)
 
-[:teacher: Race condition vulnerability in syscall wrappers](https://web.archive.org/web/20070926215258/http://chiralsoftware.com/blog/Race-condition-vulnerability-in-syscall-wrappers-fa3e57c594119803.html)
+[:large_blue_circle: Race condition vulnerability in syscall wrappers](https://web.archive.org/web/20070926215258/http://chiralsoftware.com/blog/Race-condition-vulnerability-in-syscall-wrappers-fa3e57c594119803.html)
 
-[:teacher: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
+[:large_blue_circle: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
 
-[:teacher: ConcurrentBag Class (System.Collections.Concurrent)](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0)
+[:large_blue_circle: ConcurrentBag Class (System.Collections.Concurrent)](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentbag-1?view=net-6.0)
 
-[:teacher: SynchronizedCollection Class (System.Collections.Generic)](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.synchronizedcollection-1?view=dotnet-plat-ext-6.0)
+[:large_blue_circle: SynchronizedCollection Class (System.Collections.Generic)](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.synchronizedcollection-1?view=dotnet-plat-ext-6.0)
 
-[:teacher: Work Stealing](https://en.wikipedia.org/wiki/Work_stealing)
+[:large_blue_circle: Work Stealing](https://en.wikipedia.org/wiki/Work_stealing)
 
-[:teacher: Best Practices When Using the Lock Statement](https://www.pluralsight.com/guides/lock-statement-best-practices)
+[:large_blue_circle: Best Practices When Using the Lock Statement](https://www.pluralsight.com/guides/lock-statement-best-practices)
 
-[:teacher: Overview of synchronization primitives](https://learn.microsoft.com/en-US/dotnet/standard/threading/overview-of-synchronization-primitives)
+[:large_blue_circle: Overview of synchronization primitives](https://learn.microsoft.com/en-US/dotnet/standard/threading/overview-of-synchronization-primitives)
 
-[:teacher: Inside the Concurrent Collections: ConcurrentBag - Simple Talk](https://www.red-gate.com/simple-talk/blogs/inside-the-concurrent-collections-concurrentbag/)
+[:large_blue_circle: Inside the Concurrent Collections: ConcurrentBag - Simple Talk](https://www.red-gate.com/simple-talk/blogs/inside-the-concurrent-collections-concurrentbag/)
 
-[:teacher: Mutex](https://iq.direct/blog/54-using-c-mutexes-for-inter-interprocess-synchronization.html)
+[:large_blue_circle: Mutex](https://iq.direct/blog/54-using-c-mutexes-for-inter-interprocess-synchronization.html)
 
 ### Async - Await
+[:zipper_mouth_face: Async-Await.zip](https://github.com/EnnovaAccademy/.github/files/9785106/Async-Await.zip)
+[:zipper_mouth_face: Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9785116/Async.Await.and.coordination.between.threads.zip)
 
 ![image](https://user-images.githubusercontent.com/93521016/195822208-e49ea5c5-5d6d-4ce7-b0c1-484f30fb59bb.png)
 ![image (1)](https://user-images.githubusercontent.com/93521016/195822233-2b9f20cc-dca5-4051-9040-88f3861bce82.png)
 
-[:teacher: Asynchronous programming in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
+[:large_blue_circle: Asynchronous programming in C#](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/)
 
-[:teacher: How do I find which directory my .NET Core console application was started in or is running from?](https://www.hanselman.com/blog/how-do-i-find-which-directory-my-net-core-console-application-was-started-in-or-is-running-from)
+[:large_blue_circle: How do I find which directory my .NET Core console application was started in or is running from?](https://www.hanselman.com/blog/how-do-i-find-which-directory-my-net-core-console-application-was-started-in-or-is-running-from)
 
-[:teacher: SharpLab async-await](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQAwAIpwKwG5lqZwB0AkgPL4oDMmM6AwugN7Lrua1QAcmAbAB4sqAHzoAogDsALgCcAngAUA9gEsZACgCULDnvZt97AG4BDWegDO6ALyYAnOgBiqgDYBTYgCV3p4AEFXVwAVdwAPaX9LeUkAYw0AIgYQAB0UgDM3T2kIhK0qI3YoAHYrXEL0Q3YAX2RqoA=)
+[:large_blue_circle: SharpLab async-await](https://sharplab.io/#v2:CYLg1APgAgTAjAWAFBQAwAIpwKwG5lqZwB0AkgPL4oDMmM6AwugN7Lrua1QAcmAbAB4sqAHzoAogDsALgCcAngAUA9gEsZACgCULDnvZt97AG4BDWegDO6ALyYAnOgBiqgDYBTYgCV3p4AEFXVwAVdwAPaX9LeUkAYw0AIgYQAB0UgDM3T2kIhK0qI3YoAHYrXEL0Q3YAX2RqoA=)
 
-[:teacher: SemaphoreSlim Class (System.Threading)](https://learn.microsoft.com/en-us/dotnet/api/system.threading.semaphoreslim?view=net-6.0)
+[:large_blue_circle: SemaphoreSlim Class (System.Threading)](https://learn.microsoft.com/en-us/dotnet/api/system.threading.semaphoreslim?view=net-6.0)
 
 
 ## Altro <a name="altro"></a>  <sub>[^](#indice)</sub>
 
-[:teacher: Safety Integrity Level](https://it.wikipedia.org/wiki/Safety_Integrity_Level)
+[:large_blue_circle: Safety Integrity Level](https://it.wikipedia.org/wiki/Safety_Integrity_Level)
 
-[:teacher: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
+[:large_blue_circle: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
 
 
 # Codice <a name="codice"></a>
