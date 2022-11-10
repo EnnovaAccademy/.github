@@ -662,3 +662,25 @@ namespace ConsoleApp3
 [:large_blue_circle: SQL Server Dynamic SQL](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-dynamic-sql/)
 
 [:large_blue_circle: ADO.NET Tutorial For Beginners and Professionals](https://dotnettutorials.net/course/ado-net-tutorial-for-beginners-and-professionals/)
+
+:large_blue_circle: appsettings.json
+
+```C#
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=DESKTOP-VTHSR88\\GGSQL;Database=StoreDb;Trusted_Connection=True;"
+    },
+    "Logging": {
+        "LogLevel": {
+            "Default": "Debug",
+            "System": "Information",
+            "Microsoft": "Information"
+        }
+    }
+}
+
+```
+
+
+
+
