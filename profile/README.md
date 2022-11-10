@@ -18,6 +18,7 @@
     - [Windows Form](#windows-form-code)
     - [MVVM](#mvvm-code)
     - [Multithreading](#multithread-code)
+13. [SQL](#sql)
 
 Todo:
 - [X] Inserire tabelle con definizioni SOLID e GRASP
@@ -643,3 +644,21 @@ namespace ConsoleApp3
 
 
 [^1]: La “Legge di Demetra” (o “Non parlare agli sconosciuti”) è un principio di progettazione che suggerisce di disaccoppiare le classi: - Ciascuna classe deve avere la minima informazione necessaria sulle altre classi (incluse le sue classi componenti) - Ogni classe parla solo con le classi amiche (non parla con le classi “sconosciute”)
+
+## SQL <a name="sql"></a> <sub>[^](#indice)</sub>
+
+[:large_blue_circle: Getting Started with SQL Server](https://www.sqlservertutorial.net/getting-started/)
+
+[:large_blue_circle: Download SQL Server Management Studio (SSMS) - SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+
+[:large_blue_circle: SQL Server Stored Procedures Tutorial](https://www.sqlservertutorial.net/sql-server-stored-procedures/)
+
+[:large_blue_circle: SQL Server Scalar Functions By Practical Examples](https://www.sqlservertutorial.net/sql-server-user-defined-functions/sql-server-scalar-functions/)
+
+[:large_blue_circle: SQL Server Cursor Explained By Examples](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-cursor/)
+
+[:large_blue_circle: Crosstab queries using PIVOT in SQL Server](https://www.mssqltips.com/sqlservertip/1019/crosstab-queries-using-pivot-in-sql-server/)
+
+[:large_blue_circle: SQL Server Dynamic SQL](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-dynamic-sql/)
+
+[:large_blue_circle: ADO.NET Tutorial For Beginners and Professionals](https://dotnettutorials.net/course/ado-net-tutorial-for-beginners-and-professionals/)
