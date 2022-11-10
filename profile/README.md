@@ -681,6 +681,6 @@ namespace ConsoleApp3
 
 ```
 
+![Build-action](https://user-images.githubusercontent.com/115179591/201047186-ccbd13a5-3ea0-4ee2-acfd-8bdeddba7fa2.png)
 
-
-
+![Azioni-di-compilazione](https://user-images.githubusercontent.com/115179591/201047374-aa21f2ed-32ae-4a7b-972a-e8107634e4e0.png)
