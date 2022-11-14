@@ -3,22 +3,23 @@
 
 ## Indice
 1. [Tools](#tools)
-2. [C#](#c-sharp)
-3. [Angular](#angular)
-4. [Windows Forms e WPF](#wpf)
-5. Varie Design
+1. [C#](#c-sharp)
+1. [Angular](#angular)
+1. [Windows Forms e WPF](#wpf)
+1. Varie Design
     - [Design Patterns](#design-patterns)
     - [DDD](#ddd)
-7. [SOLID](#solid)
-8. [GRASP](#grasp)
-9. [Test e unit test](#test)
-10. [Multithreading e async-await](#multithreading)
-11. [Altro](#altro)
-12. Codice
+1. [SOLID](#solid)
+1. [GRASP](#grasp)
+1. [Test e unit test](#test)
+1. [Multithreading e async-await](#multithreading)
+1. [ASP .NET][#aspdotnet]
+1. [SQL](#sql)
+1. [Altro](#altro)
+1. Codice
     - [Windows Form](#windows-form-code)
     - [MVVM](#mvvm-code)
     - [Multithreading](#multithread-code)
-13. [SQL](#sql)
 
 Todo:
 - [X] Inserire tabelle con definizioni SOLID e GRASP
@@ -30,8 +31,10 @@ Legenda:
 |Simbolo            |Significato             |
 |:-----------------:|------------------------|
 | :cherries:        |Link fornito da noi     |
-|:large_blue_circle:|Link fornito dal docente|
-| :it: :uk:         | Lingua (:uk: = default)|
+|:large_blue_circle:|Link fornito dal Federico Coletto|
+|:orange_circle:    |Link fornito da Giorgia Giacobbi |
+|:green_circle:     |Link fornito dal Matteo Vergani  |
+|:it: :uk:          | Lingua (:uk: = default)|
 |:zipper_mouth_face:| ZIP File               |
 |:star:             | Importante             |
 
@@ -73,6 +76,7 @@ Legenda:
 
 [:cherries::it: Slide introduzione angular](https://www.slideshare.net/valix85/introduzione-ad-angular-78)
 
+[:orange_circle: Converting files to base64 in angular]https://upmostly.com/angular/converting-files-to-base64-in-angular
 
 
 
@@ -80,6 +84,7 @@ Legenda:
 ## Windows Forms e WPF <a name="wpf"></a> <sub>[^](#indice)</sub>
 
 [:zipper_mouth_face: :large_blue_circle: WinFormsApp2.zip](https://github.com/EnnovaAccademy/.github/files/9785202/WinFormsApp2.zip)
+
 [:zipper_mouth_face: :large_blue_circle: WPF_Calculator_adm-master.zip](https://github.com/EnnovaAccademy/.github/files/9785203/WPF_Calculator_adm-master.zip)
 
 [:large_blue_circle: Model-view-controller (wiki)](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
@@ -98,7 +103,7 @@ Legenda:
 
 
 
-## Roba Design
+## Design Patterns
 
 
 ### Design Patterns <a name="design-patterns"></a> <sub>[^](#indice)</sub>
@@ -170,7 +175,9 @@ Legenda:
 ## Test e Unit Test <a name="test"></a> <sub>[^](#indice)</sub>
 
 [:zipper_mouth_face: :large_blue_circle: Multithreading and unit testing.zip](https://github.com/EnnovaAccademy/.github/files/9787279/Multithreading.and.unit.testing.zip)
+
 [:zipper_mouth_face: :large_blue_circle: BenchmarksApp.zip](https://github.com/EnnovaAccademy/.github/files/9787285/BenchmarksApp.zip)
+
 [:zipper_mouth_face: :large_blue_circle: Unit-tested Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9787293/Unit-tested.Async.Await.and.coordination.between.threads.zip)
 
 [:large_blue_circle: Unit Testing](https://en.wikipedia.org/wiki/Unit_testing)
@@ -211,6 +218,7 @@ Legenda:
 
 ### Async - Await
 [:zipper_mouth_face: :large_blue_circle: Async-Await.zip](https://github.com/EnnovaAccademy/.github/files/9785106/Async-Await.zip)
+
 [:zipper_mouth_face: :large_blue_circle: Async Await and coordination between threads.zip](https://github.com/EnnovaAccademy/.github/files/9785116/Async.Await.and.coordination.between.threads.zip)
 
 
@@ -250,12 +258,120 @@ Legenda:
 
 
 
+## ASP .NET<a name="aspdotnet"></a> <sub>[^](#indice)</sub>
+
+[:star: :green_circle: Learn ASP.NET Core MVC (.NET 6) - Full Course](https://www.youtube.com/watch?v=hZ1DASYd9rk)
+
+[:green_circle: JWT Authentication And Authorization](https://www.c-sharpcorner.com/article/jwt-authentication-and-authorization-in-net-6-0-with-identity-framework/)
+
+[:cherries: Simple way to fake an authenticated user for integration test](https://github.com/webmotions/fake-authentication-jwtbearer)
+
+
+```C#
+"JWT": {
+    "ValidIssuer": "https://localhost:7130",
+    "Secret": "BlaBlaBlaThis1smyS3cr37ff4ss3f5fsdfsdf"
+  }
+```
+```C#
+var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:Secret"]));
+    var token = new JwtSecurityToken(
+        issuer: _config["JWT:ValidIssuer"],
+        expires: DateTime.Now.AddHours(3),
+        claims: authClaims,
+        signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+        );
+```
+```C#
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+```
+```C#
+.AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidAudience = configuration["JWT:ValidAudience"],
+        ValidIssuer = configuration["JWT:ValidIssuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
+    };
+});
+```
+```C#
+IdentityDbContext<IdentityUser>
+```
+
+
+
+
+## SQL <a name="sql"></a> <sub>[^](#indice)</sub>
+
+[:zipper_mouth_face: :orange_circle: Academy.Store.App.Console.zip](https://github.com/EnnovaAccademy/.github/files/10001926/Academy.Store.App.Console.zip)
+
+[:zipper_mouth_face: :orange_circle: Academy.BookStore.Services.Contracts.zip](https://github.com/EnnovaAccademy/.github/files/10001956/Academy.BookStore.Services.Contracts.zip)
+
+[:orange_circle: Getting Started with SQL Server](https://www.sqlservertutorial.net/getting-started/)
+
+[:orange_circle: Download SQL Server Management Studio (SSMS) - SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+
+[:orange_circle: SQL Server Stored Procedures Tutorial](https://www.sqlservertutorial.net/sql-server-stored-procedures/)
+
+[:orange_circle: SQL Server Scalar Functions By Practical Examples](https://www.sqlservertutorial.net/sql-server-user-defined-functions/sql-server-scalar-functions/)
+
+[:orange_circle: SQL Server Cursor Explained By Examples](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-cursor/)
+
+[:orange_circle: Crosstab queries using PIVOT in SQL Server](https://www.mssqltips.com/sqlservertip/1019/crosstab-queries-using-pivot-in-sql-server/)
+
+[:orange_circle: SQL Server Dynamic SQL](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-dynamic-sql/)
+
+[:orange_circle: ADO.NET Tutorial For Beginners and Professionals](https://dotnettutorials.net/course/ado-net-tutorial-for-beginners-and-professionals/)
+
+[:orange_circle: Entity Framework Core: Saving Data in Connected Scenario](https://www.entityframeworktutorial.net/efcore/saving-data-in-connected-scenario-in-ef-core.aspx)
+
+### :orange_circle: appsettings.json
+
+```C#
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=DESKTOP-VTHSR88\\GGSQL;Database=StoreDb;Trusted_Connection=True;"
+    },
+    "Logging": {
+        "LogLevel": {
+            "Default": "Debug",
+            "System": "Information",
+            "Microsoft": "Information"
+        }
+    }
+}
+
+```
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/115179591/201047186-ccbd13a5-3ea0-4ee2-acfd-8bdeddba7fa2.png" alt="Build-action" width="400"/></td>
+    <td><img src="https://user-images.githubusercontent.com/115179591/201047374-aa21f2ed-32ae-4a7b-972a-e8107634e4e0.png" alt="Azioni-di-compilazione" width="400"/></td>
+  </tr>
+</table>
+
+
+
+
 
 ## Altro <a name="altro"></a>  <sub>[^](#indice)</sub>
 
 [:large_blue_circle: Safety Integrity Level](https://it.wikipedia.org/wiki/Safety_Integrity_Level)
 
 [:large_blue_circle: Therac-25](https://en.wikipedia.org/wiki/Therac-25)
+
+[:cherries: Material 3 Design Kit (Community)](https://www.figma.com/file/TnH4taIYrqY0GegmYKuyuk/Material-3-Design-Kit-(Community)?node-id=47909%3A2)
 
 
 
@@ -644,43 +760,3 @@ namespace ConsoleApp3
 
 
 [^1]: La “Legge di Demetra” (o “Non parlare agli sconosciuti”) è un principio di progettazione che suggerisce di disaccoppiare le classi: - Ciascuna classe deve avere la minima informazione necessaria sulle altre classi (incluse le sue classi componenti) - Ogni classe parla solo con le classi amiche (non parla con le classi “sconosciute”)
-
-## SQL <a name="sql"></a> <sub>[^](#indice)</sub>
-
-[:large_blue_circle: Getting Started with SQL Server](https://www.sqlservertutorial.net/getting-started/)
-
-[:large_blue_circle: Download SQL Server Management Studio (SSMS) - SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
-
-[:large_blue_circle: SQL Server Stored Procedures Tutorial](https://www.sqlservertutorial.net/sql-server-stored-procedures/)
-
-[:large_blue_circle: SQL Server Scalar Functions By Practical Examples](https://www.sqlservertutorial.net/sql-server-user-defined-functions/sql-server-scalar-functions/)
-
-[:large_blue_circle: SQL Server Cursor Explained By Examples](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-cursor/)
-
-[:large_blue_circle: Crosstab queries using PIVOT in SQL Server](https://www.mssqltips.com/sqlservertip/1019/crosstab-queries-using-pivot-in-sql-server/)
-
-[:large_blue_circle: SQL Server Dynamic SQL](https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-dynamic-sql/)
-
-[:large_blue_circle: ADO.NET Tutorial For Beginners and Professionals](https://dotnettutorials.net/course/ado-net-tutorial-for-beginners-and-professionals/)
-
-:large_blue_circle: appsettings.json
-
-```C#
-{
-    "ConnectionStrings": {
-        "DefaultConnection": "Server=DESKTOP-VTHSR88\\GGSQL;Database=StoreDb;Trusted_Connection=True;"
-    },
-    "Logging": {
-        "LogLevel": {
-            "Default": "Debug",
-            "System": "Information",
-            "Microsoft": "Information"
-        }
-    }
-}
-
-```
-
-![Build-action](https://user-images.githubusercontent.com/115179591/201047186-ccbd13a5-3ea0-4ee2-acfd-8bdeddba7fa2.png)
-
-![Azioni-di-compilazione](https://user-images.githubusercontent.com/115179591/201047374-aa21f2ed-32ae-4a7b-972a-e8107634e4e0.png)
