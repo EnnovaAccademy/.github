@@ -13,7 +13,7 @@
 1. [GRASP](#grasp)
 1. [Test e unit test](#test)
 1. [Multithreading e async-await](#multithreading)
-1. [ASP .NET][#aspdotnet]
+1. [ASP .NET](#aspdotnet)
 1. [SQL](#sql)
 1. [Altro](#altro)
 1. Codice
